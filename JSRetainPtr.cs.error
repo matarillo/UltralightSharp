@@ -1,0 +1,35 @@
+namespace Native
+{
+    public enum AdoptTag
+    {
+        Adopt,
+    }
+
+    public static unsafe partial class JavaScriptCore
+    {
+        private const string libraryPath = "C:\Users\kinomata1\Downloads\include\JavaScriptCore\WebCore.dll";
+
+        public static void JSRetain([NativeTypeName("JSStringRef")] OpaqueJSString* @string)
+        {
+            JSStringRetain(@string);
+        }
+
+        public static void JSRelease([NativeTypeName("JSStringRef")] OpaqueJSString* @string)
+        {
+            JSStringRelease(@string);
+        }
+
+        public static void JSRetain([NativeTypeName("JSGlobalContextRef")] OpaqueJSContext* context)
+        {
+            JSGlobalContextRetain(context);
+        }
+
+        public static void JSRelease([NativeTypeName("JSGlobalContextRef")] OpaqueJSContext* context)
+        {
+            JSGlobalContextRelease(context);
+        }
+
+        public static JSRetainPtr<JSStringRef> adopt([NativeTypeName("JSStringRef")] OpaqueJSString* o)
+        {
+    }
+}

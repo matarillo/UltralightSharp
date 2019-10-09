@@ -1,0 +1,53 @@
+using System;
+using System.Runtime.InteropServices;
+
+namespace UltralightInterop.Data
+{
+    public enum ULCursor
+    {
+        Pointer = 0,
+        Cross,
+        Hand,
+        IBeam,
+        Wait,
+        Help,
+        EastResize,
+        NorthResize,
+        NorthEastResize,
+        NorthWestResize,
+        SouthResize,
+        SouthEastResize,
+        SouthWestResize,
+        WestResize,
+        NorthSouthResize,
+        EastWestResize,
+        NorthEastSouthWestResize,
+        NorthWestSouthEastResize,
+        ColumnResize,
+        RowResize,
+        MiddlePanning,
+        EastPanning,
+        NorthPanning,
+        NorthEastPanning,
+        NorthWestPanning,
+        SouthPanning,
+        SouthEastPanning,
+        SouthWestPanning,
+        WestPanning,
+        Move,
+        VerticalText,
+        Cell,
+        ContextMenu,
+        Alias,
+        Progress,
+        NoDrop,
+        Copy,
+        None,
+        NotAllowed,
+        ZoomIn,
+        ZoomOut,
+        Grab,
+        Grabbing,
+        Custom,
+    }
+}
