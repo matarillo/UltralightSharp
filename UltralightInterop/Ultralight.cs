@@ -128,12 +128,10 @@ namespace UltralightInterop
             public static extern void ulViewResize(ULView view, uint width, uint height);
 
             [DllImport(libraryPath, EntryPoint = "ulViewGetJSContext", CallingConvention = CallingConvention.Cdecl)]
-            [return: NativeTypeName("JSContextRef")]
-            public static extern OpaqueJSContext* ulViewGetJSContext(ULView view);
+            public static extern JSContextRef ulViewGetJSContext(ULView view);
 
             [DllImport(libraryPath, EntryPoint = "ulViewEvaluateScript", CallingConvention = CallingConvention.Cdecl)]
-            [return: NativeTypeName("JSValueRef")]
-            public static extern OpaqueJSValue* ulViewEvaluateScript(ULView view, ULString js_string);
+            public static extern JSValueRef ulViewEvaluateScript(ULView view, ULString js_string);
 
             [DllImport(libraryPath, EntryPoint = "ulViewCanGoBack", CallingConvention = CallingConvention.Cdecl)]
             public static extern bool ulViewCanGoBack(ULView view);
@@ -205,10 +203,10 @@ namespace UltralightInterop
             public static extern ULString ulCreateString([MarshalAs(UnmanagedType.LPStr)] string str);
 
             [DllImport(libraryPath, EntryPoint = "ulCreateStringUTF8", CallingConvention = CallingConvention.Cdecl)]
-            public static extern ULString ulCreateStringUTF8([In] byte[] str, UIntPtr len);
+            public static extern ULString ulCreateStringUTF8(byte[] str, UIntPtr len);
 
             [DllImport(libraryPath, EntryPoint = "ulCreateStringUTF16", CallingConvention = CallingConvention.Cdecl)]
-            public static extern ULString ulCreateStringUTF16([In] char[] str, UIntPtr len);
+            public static extern ULString ulCreateStringUTF16(char[] str, UIntPtr len);
 
             [DllImport(libraryPath, EntryPoint = "ulDestroyString", CallingConvention = CallingConvention.Cdecl)]
             public static extern void ulDestroyString(ULString str);
